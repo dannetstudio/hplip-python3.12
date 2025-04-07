@@ -71,6 +71,9 @@ Author:
 Don Welch
 Yashwant Kumar Sahu
 Sanjay Kumar
+
+Modified for Python 3.x compatibility by [Daniel Ignacio Fernández, DannetStudio.com]
+
 */
 
 #define PY_SSIZE_T_CLEAN
@@ -88,6 +91,12 @@ Sanjay Kumar
 #include "cupsext.h"
 #include "hp_ipp.h"
 #include "utils.h"
+
+int addCupsPrinter(const char *name, const char *device_uri, const char *location, const char *ppd_file, const char *model, const char *info);
+int delCupsPrinter(const char *name);
+int setDefaultCupsPrinter(const char *name);
+int controlCupsPrinter(const char *name, int op);
+void _releaseCupsInstance(void);
 
 /* Ref: PEP 353 (Python 2.5) */
 #if PY_VERSION_HEX < 0x02050000

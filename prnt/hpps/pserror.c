@@ -3,6 +3,10 @@
  * See file LICENSE for details.
  *
  * Warnings and errors for PS programs
+ * 
+ * Modified by [Daniel Ignacio Fernández, DannetStudio.com] - April 2025
+ * - Fixed variable type declaration for Python 3.12 compatibility
+ * - Added explicit int type for 'column' variable to avoid compiler errors with modern GCC
  */
 
 extern char *program ;	/* Defined by main program, giving program name */
@@ -24,7 +28,7 @@ extern char *program ;	/* Defined by main program, giving program name */
 void message(int flags, char *format, ...)
 {
   va_list args ;
-  static column = 0 ;		/* current screen column for message wrap */
+  static int column = 0 ;		/* current screen column for message wrap */
   char msgbuf[MAX_MESSAGE] ;	/* buffer in which to put the message */
   char *bufptr = msgbuf ;	/* message buffer pointer */
 
