@@ -1,0 +1,88 @@
+#include <abstractions/base>
+#include <abstractions/authentication>
+#include <abstractions/cups-client>
+#include <abstractions/dbus-accessibility>
+#include <abstractions/dbus-session>
+#include <abstractions/fonts>
+#include <abstractions/dconf>
+#include <abstractions/python>
+# #include <abstractions/ubuntu-browsers.d/plugins-common>
+# #include <abstractions/ubuntu-browsers.d/java>
+#include <abstractions/gnome>
+#include <abstractions/nameservice>
+#include <abstractions/openssl>	
+
+/usr/{,local/}bin/python* ix,
+
+/etc/ r,
+/etc/** r,
+/var/ r,
+/bin/bash ix,
+/etc/hp/hplip.conf r,
+/tmp/* rw,
+owner @{HOME} r,
+owner @{HOME}/** rw,
+/dev/** rw,
+/usr/share/** r,
+@{sys}/** r,
+/usr/** r,
+/bin/ r,
+/sbin/ r,
+/bin/** r,
+/sbin/** r,
+/usr/bin/lsusb Ux,
+network,
+@{PROC}/@{pid}/** r,
+@{PROC}/** r,
+owner /{,var/}run/user/*/dconf/user w,
+owner @{HOME}/.config/dconf/user w,
+dbus,
+
+/{,usr/}bin/cut rix,
+/{,usr/}bin/tar rix,
+/{,usr/}bin/lsb_release rix,
+/{,usr/}bin/head rix,
+/{,usr/}bin/gawk rix,
+/{,usr/}bin/cat rix,
+/{,usr/}bin/ldconfig rix,
+/{,usr/}bin/gs rix,
+/{,usr/}bin/libtool rix,
+/{,usr/}bin/scanimage rix,
+/{,usr/}bin/xsane rix,
+/{,usr/}bin/lpstat rix,
+/{,usr/}bin/g[c+][c+]* rix,
+/{,usr/}bin/make rix,
+/{,usr/}bin/ps rix,
+/{,usr/}bin/file rix,
+/{,usr/}bin/cups-config rix,
+/{,usr/}bin/uname rix,
+/sbin/ldconfig rix,
+/usr/lib{32,64}/** mra,
+/{,usr/}bin/sed rix,
+/{,usr/}bin/grep rix,
+@{PROC}/** r,
+/{,usr/}bin/dirname rix,
+/{,usr/}bin/pkexec rix,
+/{,usr/}bin/wget rix,
+/{,usr/}bin/avahi-browse rix,
+/{,usr/}bin/bus-daemon rix,
+/{,usr/}bin/openssl rix,
+/{,usr/}bin/net-snmp-config rix,
+/{,usr/}bin/sane-config rix,
+/{,usr/}bin/stty rix,
+/{,usr/}bin/dash rix,
+
+# HPLIP
+/usr/{,local/}share/hplip/** rw,
+@{HOME}/** rak,
+@{HOME}/Downloads/** w,
+@{HOME}/.hplip/** rwk,
+/var/lib/hp/** rw,
+/var/lib/** rw,
+/var/* rwk,
+/usr/{,local/}share/hplip/fax/plugins/* mr,
+/usr/{,local/}share/hplip/scan/plugins/* mr,
+/usr/{,local/}share/hplip/prnt/plugins/* mr,
+/{,usr/}bin/sudo rix,
+/{,usr/}bin/su rix,
+/run/** rw,

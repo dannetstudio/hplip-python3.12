@@ -1,0 +1,57 @@
+# Build artifacts
+*.o
+*.lo
+*.la
+*.so
+*.a
+.deps/
+.libs/
+Makefile
+Makefile.in
+config.log
+config.status
+config.cache
+autom4te.cache/
+*.log
+*.tgz
+*.tar.gz
+
+# Temporary files
+*~
+*.swp
+*.swo
+.DS_Store
+
+# Python specific
+*.pyc
+*.pyo
+__pycache__/
+*.egg-info/
+dist/
+build/
+
+# Generated files
+/libtool
+/stamp-h1
+*.pc
+/configure~
+
+# IDE specific
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Testing and documentation builds
+/doc/build/
+/test-results/
+
+# Generated PPD files
+*.ppd.gz
+*.ppd
+
+# Installed files
+/usr/
+/etc/
+.history
+/.history
