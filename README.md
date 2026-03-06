@@ -14,7 +14,7 @@ This repository contains a modified version of HP Linux Imaging and Printing (HP
 ## Compatibility
 - **Linux Distributions**: Works on most modern distributions (Ubuntu 24.04/24.10, Fedora, Debian, Arch, etc.)
 - **Desktop Environments**: Compatible with X11, Wayland, and other graphical environments
-- **Python Versions**: Optimized for Python 3.12, but compatible with Python 3.8+
+- **Python Versions**: Optimized for Python 3.12+
 - **Printers**: Supports most HP printers, including USB and network models
 
 ## Dependencies
