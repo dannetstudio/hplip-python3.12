@@ -47,7 +47,6 @@ import time
 import io
 import binascii
 import xml.parsers.expat
-from string import *
 import json
 import ast
 

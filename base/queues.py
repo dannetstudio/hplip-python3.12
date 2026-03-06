@@ -46,7 +46,7 @@ HPPS = 3
 HPOTHER = 4
 
 DEVICE_URI_PATTERN = re.compile(r"""(.*):/(.*?)/(\S*?)\?(?:serial=(\S*)|device=(\S*)|ip=(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}[^&]*)|zc=(\S+))(?:&port=(\d))?""", re.I)
-NICKNAME_PATTERN = re.compile(b'''\*NickName:\s*\"(.*)"''', re.MULTILINE)
+NICKNAME_PATTERN = re.compile(rb'''\*NickName:\s*\"(.*)"''', re.MULTILINE)
 NET_PATTERN = re.compile(r"""(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})""")
 NET_ZC_PATTERN = re.compile(r'''zc=(.*)''',re.IGNORECASE)
 NET_OTHER_PATTERN = re.compile(r'''(.*)://(.*)''',re.IGNORECASE)

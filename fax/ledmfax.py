@@ -43,7 +43,7 @@ from .fax import *
 
 # **************************************************************************** #
 
-http_result_pat = re.compile(b"""HTTP/\d.\d\s(\d+)""", re.I)
+http_result_pat = re.compile(rb"""HTTP/\d.\d\s(\d+)""", re.I)
 
 HTTP_OK = 200
 HTTP_ACCEPTED = 202
