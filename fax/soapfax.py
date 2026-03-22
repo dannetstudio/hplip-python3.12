@@ -42,7 +42,7 @@ from base.sixext import to_bytes_utf8
 
 # **************************************************************************** #
 
-http_result_pat = re.compile("""HTTP/\d.\d\s(\d+)""", re.I)
+http_result_pat = re.compile(r"""HTTP/\d.\d\s(\d+)""", re.I)
 
 
 TIME_FORMAT_AM_PM = 1

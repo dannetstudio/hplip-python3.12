@@ -725,7 +725,7 @@ class Ui_HpScan(object):
                 self.comboBox_Flatbed.setItemText(2, _translate("HpScan", "Duplex", None))
                 self.comboBox_Flatbed.setItemText(3, _translate("HpScan", "ADF-Backside", None))
                 self.comboBox_Flatbed.setCurrentIndex(1)
-            if device == '5000' or device == '7500' or device == '9120' or device == '3600' or device == '4600' or device == '2600' or device == '6600' or device == '8500' or device == '3500' or device == '4500' or device == '3000' or device == '7000' or device == '2000' or device == '2500' or device == '4000' device == '260x' device == 'M232-M236':
+            if device == '5000' or device == '7500' or device == '9120' or device == '3600' or device == '4600' or device == '2600' or device == '6600' or device == '8500' or device == '3500' or device == '4500' or device == '3000' or device == '7000' or device == '2000' or device == '2500' or device == '4000' or device == '260x' or device == 'M232-M236':
                 if device == '2500' or device == '2000' or device == '2600':
                     self.multi_pick_pri = False
                     self.multi_pick.setEnabled(False)
@@ -1489,7 +1489,8 @@ class Ui_HpScan(object):
         elif re.search(r'_3000_s4', self.device_uri):
             self.device_name = '3000'
         elif re.search(r'_5000_s5', self.device_uri):
-            self.device_name = '5000'                                                                                                                elif re.search(r'_260x', self.device_uri):
+            self.device_name = '5000'
+        elif re.search(r'_260x', self.device_uri):
             self.device_name = '260x'
         elif re.search(r'_4104', self.device_uri):
             self.device_name = '4104'

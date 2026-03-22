@@ -53,9 +53,9 @@ total_models = 0
 sorted_category_models = {}
 unsupported_models = []
 
-pat_prod_num = re.compile("""(\d+)""", re.I)
-pat_template = re.compile("""^(\s*)//\s*<%(\S+)%>""", re.I)
-pat_template2 = re.compile("""^\s*<%(\S+)%>""", re.I)
+pat_prod_num = re.compile(r"""(\d+)""", re.I)
+pat_template = re.compile(r"""^(\s*)//\s*<%(\S+)%>""", re.I)
+pat_template2 = re.compile(r"""^\s*<%(\S+)%>""", re.I)
 
 
 SHORTENING_REPLACEMENTS = {

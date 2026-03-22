@@ -627,7 +627,7 @@ class DependenciesCheck(object):
                     status, output = utils.run("%s -d03f0:" % lsusb)
 
                     if output:
-                        lsusb_pat = re.compile("""^Bus\s([0-9a-fA-F]{3,3})\sDevice\s([0-9a-fA-F]{3,3}):\sID\s([0-9a-fA-F]{4,4}):([0-9a-fA-F]{4,4})(.*)""", re.IGNORECASE)
+                        lsusb_pat = re.compile(r"""^Bus\s([0-9a-fA-F]{3,3})\sDevice\s([0-9a-fA-F]{3,3}):\sID\s([0-9a-fA-F]{4,4}):([0-9a-fA-F]{4,4})(.*)""", re.IGNORECASE)
                         log.debug(output)
                         try:
                             hpmudext = utils.import_ext('hpmudext')

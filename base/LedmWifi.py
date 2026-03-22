@@ -24,8 +24,6 @@ import time
 import io
 import binascii
 import xml.parsers.expat
-from string import *
-
 # Local
 from .g import *
 from . import device, utils
@@ -367,8 +365,8 @@ def getwifiotherdetails(dev,adapterName):
             break 
 
     if code1 !=HTTP_OK and code2 != HTTP_OK:
-        log.error("Request Failed With Response Code %d" %code)
-        return ip, subnet, gateway, pri_dns, sec_dns 
+        log.error("Request Failed With Response Code %d" %code1)
+        return ip, subnet, gateway, pri_dns, sec_dns, mode
 	
     if params1 is not None and params2 is not None:
         try:
@@ -425,7 +423,7 @@ def associate(dev, adapterName, ssid, communication_mode, encryption_type, key):
 
     code = writeXmlDataToURI(dev,URI,ppXml,60)
     ret['errorreturn'] = code
-    if not(code == HTTP_OK or HTTP_NOCONTENT):
+    if not(code == HTTP_OK or code == HTTP_NOCONTENT):
         log.error("Request Failed With Response Code %d" % ret['errorreturn'])
     
     return ret
